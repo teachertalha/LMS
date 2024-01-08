@@ -5,7 +5,7 @@ import Navbar from './Navbar';
 function Users() {
   const [users , setUsers] = useState([]);
   useEffect(()=>{
-    fetch("http://localhost:8800/users").then((data)=>data.json()).then((res)=>setUsers(res));
+    fetch("http://localhost:8080/api/users").then((data)=>data.json()).then((res)=>setUsers(res));
   },[])
   console.log(users);
   return (
@@ -18,31 +18,28 @@ function Users() {
             <div className="order">
               <div className="head">
                 <h3>Users Info</h3>
-                {/* <i className='bx bx-search' id="i"></i>
-                <i className='bx bx-filter' id="i"></i> */}
               </div>
-              <table id="user">
-                <thead>
-                  <tr>
-                    {/* <th>Sno</th>  */}
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Phone Number</th>
-                    <th>Qualification</th>
+              <table id="user" style={{ width: '100%', borderCollapse: 'collapse', marginTop: '20px' }}>
+              <thead>
+                <tr style={{ borderBottom: '1px solid #ddd' }}>
+                  <th style={{ padding: '10px', textAlign: 'start', borderBottom: '1px solid #ddd' }}>Username</th>
+                  <th style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>Email</th>
+                  <th style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>Phone Number</th>
+                  <th style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>Profession</th>
+                </tr>
+              </thead>
+              <tbody>
+                {users.map((user, index) => (
+                  <tr key={index} style={{ borderBottom: '1px solid #ddd' }}>
+                    <td style={{ padding: '10px', textAlign: 'start', borderBottom: '1px solid #ddd' }}>{user.username}</td>
+                    <td style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{user.email}</td>
+                    <td style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{user.phno}</td>
+                    <td style={{ padding: '10px', textAlign: 'center', borderBottom: '1px solid #ddd' }}>{user.profession}</td>
                   </tr>
-                </thead>
-                <tbody>
-                {users.map((user) => (
-                   <tr>
-                    {/* <td>{user.id}</td> */}
-                   <td><p>{user.name}</p></td>
-                   <td>{user.email}</td>
-                   <td>{user.phno}</td>
-                   <td>{user.qualification}</td>
-                 </tr>
                 ))}
-                </tbody>
-              </table>
+              </tbody>
+            </table>
+
             </div>
           </div>
         </main>

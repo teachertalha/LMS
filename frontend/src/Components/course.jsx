@@ -165,7 +165,7 @@ const Course = () => {
               height="440px" 
               onDuration={handleDuration}
               played={played}
-              style={{boxShadow: "0 0 20px rgba(0, 0, 0, 0.52) " , padding:'8px',backgroundColor:'darkgrey',borderRadius:'10px'}}
+              style={{boxShadow: "0 0 20px rgba(0, 0, 0, 0.52)" , padding:'8px',backgroundColor:'darkgrey',borderRadius:'10px'}}
             />
             <div style={{ width: "50%" , boxShadow: "0 0 20px rgba(0, 0, 0, 0.52)" , borderRadius:'10px'}}>
               <h4>Course Format:</h4>

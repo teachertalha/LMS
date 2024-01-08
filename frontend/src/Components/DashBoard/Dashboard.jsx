@@ -6,19 +6,16 @@ function Dashboard() {
   // const [dashboard , setDashboard] = useState(0);
   
   const [userscount , setUserscount] = useState(0);
-  const [tutorscount , setTutorscount] = useState(0);
   const [coursescount , setCoursescount] = useState(0);
   const[enrolled , setEnrolled] = useState(0);
 
   useEffect(()=>{
-    fetch("http://localhost:8800/users").then((data)=>data.json()).then((res)=>setUserscount(res.length));
-    fetch("http://localhost:8800/tutors").then((data)=>data.json()).then((res)=>setTutorscount(res.length));
-    fetch("http://localhost:8800/courses").then((data)=>data.json()).then((res)=>setCoursescount(res.length));
-    fetch("http://localhost:8800/allcarts").then((data)=>data.json()).then((res)=>setEnrolled(res.length));
+    fetch("http://localhost:8080/api/users").then((data)=>data.json()).then((res)=>setUserscount(res.length));
+    fetch("http://localhost:8080/api/courses").then((data)=>data.json()).then((res)=>setCoursescount(res.length));
+    fetch("http://localhost:8080/api/learning").then((data)=>data.json()).then((res)=>setEnrolled(res.length));
   },[])
 
   return (
-    
     <body style={{backgroundColor:"#eee"}}>
       <SideBar current={"dashboard"}/>
       <section id="content">
@@ -27,25 +24,14 @@ function Dashboard() {
           <div className="head-title">
             <div className="left">
               <h1 id="dashboard" style={{color:'darkblue'}} > Dashboard</h1>
-              
             </div>
           </div>
-
           <ul    className="box-info">
             <li>
             <i className='bx bxs-group' id="i"></i>
-              
               <span className="text">
                 <h3>{userscount}</h3>
                 <p>Total Users</p>
-              </span>
-            </li>
-            <li>
-            <i className='bx bxs-group' id="i"></i>
-              
-              <span className="text">
-                <h3>{tutorscount}</h3>
-                <p>Total Tutors</p>
               </span>
             </li>
             <li>

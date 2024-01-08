@@ -9,7 +9,6 @@ function SideBar(props){
         <div id="sidebar">
         
         <Link to={"/dashboard"} className="brand a">
-          {/* <i className='bx bxs-smile'  ></i> */}
           <img src={img1} alt=""/>
           <span className="text" id="admin">LMS Admin</span>
           </Link>
@@ -27,12 +26,6 @@ function SideBar(props){
               <span className="text">Users</span>
             </Link>
           </li>
-          <li  className={current ==="tutor" ? 'active' : ''}>
-          <Link to={"/Dtutors"} className="a">
-              <i className='bx bxs-group' id="i"></i>
-              <span className="text">Tutors</span>
-            </Link>
-          </li>
           <li className={current ==="courses" ? 'active' : ''}>
           <Link to={"/DCourses"} className="a">
               <i className='bx bxs-book' id="i"></i>
@@ -40,14 +33,6 @@ function SideBar(props){
             </Link>
           </li>
         </ul>
-        {/* <ul className="side-menu">
-          <li>
-            <a href="#" className="logout">
-              <i className='bx bxs-log-out-circle' id="i"></i>
-              <span className="text">Logout</span>
-            </a>
-          </li>
-        </ul> */}
       </div>
     );
 }

@@ -31,7 +31,7 @@ function Courses() {
   };
 
   useEffect(() => {
-    fetch("http://localhost:8800/courses")
+    fetch(`http://localhost:8080/api/courses`)
       .then((response) => response.json())
       .then((data) => {
         setCourses(data);
@@ -66,17 +66,17 @@ function Courses() {
   }
   return (
     <>
-      <body style={{ backgroundColor: "#eee" }}>
+      <body>
         <SideBar current={"courses"} />
         <section id="content">
           <Navbar />
-          <main>
+          <main className="t">
             <div className="table-data" style={{ marginTop: "-10px" }}>
               <div className="order">
                 <div id="course" className="todo">
                   <div className="head" style={{ marginTop: "-100px" }}>
-                    <h3>Courses</h3>
-                    {/* <button
+                    <h3 style={{color:'white'}}>Courses</h3>
+                    <button
                       onClick={() => navigate("/addcourse")}
                       style={{
                         backgroundColor: "darkblue",
@@ -89,34 +89,32 @@ function Courses() {
                     >
                       Add Course{" "}
                       <FontAwesomeIcon icon={faPlus}></FontAwesomeIcon>{" "}
-                    </button> */}
+                    </button>
                   </div>
                   <ul className="todo-list">
                     {courses.map((course) => (
                       <div key={course.course_id}>
-                        <li className="completed" style={{ marginTop: "10px" }}>
-                          <div style={{width:"70%", display:"flex" ,justifyContent:"space-between"}}>
-                          <p>{course.course_name}</p>
-                          <div style={{width:"40%",display:"flex"}}><p>-{course.instructor}</p></div>
-                            </div>
+                        <li className="completed" style={{ marginTop: "10px",backgroundColor:'white',color:'black' }}>
+                          <p >{course.course_name}</p>
                           <div style={{ width: "50px", display: "flex" }}>
                               <button
                                 onClick={() => {setOpenModal(true);setCid(course.course_id)}}
-                                style={{ marginLeft: "-30px",marginRight:'40px' }}
+	
+                                style={{ marginLeft: "-100px",marginRight:'40px' ,backgroundColor:'white'}}
                                 className="delete-button"
                               >
                               <FontAwesomeIcon icon={faTrash}></FontAwesomeIcon>
                             </button>
 
-                            {/* <button
+                            <button
                               onClick={() => editCourse(course.course_id)}
-                              
+                              style={{ marginRight: "40px" ,backgroundColor:'white'}}
                               className="edit-button"
                             >
-                              <FontAwesomeIcon icon={faEdit}></FontAwesomeIcon>
-                            </button> */}
+                              <FontAwesomeIcon    icon={faEdit}></FontAwesomeIcon>
+                            </button>
                               
-                            {/* <button onClick={() => addquestions(course.course_id)}
+                            <button onClick={() => addquestions(course.course_id)}
                             style={{
                               backgroundColor: "#457BC1",
                               borderRadius: "10px",
@@ -127,7 +125,7 @@ function Courses() {
                             }}
                             >
                               Test
-                            </button> */}
+                            </button>
                           </div>
                         </li>
                       </div>
