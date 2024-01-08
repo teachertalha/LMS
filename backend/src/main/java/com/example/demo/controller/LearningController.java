@@ -21,6 +21,11 @@ public class LearningController {
         return learningService.getLearningCourses(userId);
     }
 
+    @GetMapping
+    public List<Learning> getEnrollments() {
+        return learningService.getEnrollments();
+    }
+
     @PostMapping
     public String enrollCourse(@RequestBody EnrollRequest enrollRequest) {
     	System.out.println(enrollRequest.getCourseId() +" = "+enrollRequest.getUserId());
