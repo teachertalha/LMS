@@ -31,11 +31,25 @@ public class LearningService {
     private ProgressRepository progressRepository;
 
     public List<Course> getLearningCourses(Long userId) {
-        User user = userRepository.findById(userId).orElse(null);
-        if (user != null) {
-            return user.getLearningCourses().stream().map(Learning::getCourse).toList();
+        Optional<User> optionalUser = userRepository.findById(userId);
+        
+        if (optionalUser.isPresent()) {
+            User user = optionalUser.get();
+            List<Course> learningCourses = new ArrayList<>();
+
+            for (Learning learning : user.getLearningCourses()) {
+                Course course = learning.getCourse();
+                learningCourses.add(course);
+            }
+
+            return learningCourses;
         }
+
         return null;
+    }
+
+    public List<Learning> getEnrollments() {
+    	return learningRepository.findAll();
     }
 
     public String enrollCourse(EnrollRequest enrollRequest) {
