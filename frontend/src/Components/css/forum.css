@@ -9,7 +9,7 @@
     height:100vh;
     padding: 25;
     position:absolute;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.52);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.52); 
   }
   .inputContainer{
     height:20%;
