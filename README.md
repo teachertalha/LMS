@@ -77,7 +77,6 @@ Feel free to contribute to the project by opening issues or submitting pull requ
 ![Screenshot (90)](https://github.com/PATMESH/Learning-Management-System/assets/101879714/c79f58d5-d5e0-4899-85cc-fe126fdc09c5)
 ![Screenshot (91)](https://github.com/PATMESH/Learning-Management-System/assets/101879714/79641a32-f261-433c-a183-7f262a121c9b)
 ![Screenshot (92)](https://github.com/PATMESH/Learning-Management-System/assets/101879714/c6c2cd14-e3c3-4906-bfec-85054325542e)
-![Screenshot (93)](https://github.com/PATMESH/Learning-Management-System/assets/101879714/3ab9731b-ff38-49d8-af11-af8c0cbd9228)
 ![Screenshot (94)](https://github.com/PATMESH/Learning-Management-System/assets/101879714/602071e3-f74c-4026-9d7c-fc1cc9aa4f58)
 ![Screenshot (95)](https://github.com/PATMESH/Learning-Management-System/assets/101879714/ba3a9695-cde5-437d-b05c-2c1babb1eedc)
 ![Screenshot (96)](https://github.com/PATMESH/Learning-Management-System/assets/101879714/5383d0f6-edba-4cd3-8fb0-53ba2ca76b5c)
