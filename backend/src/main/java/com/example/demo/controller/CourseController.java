@@ -29,7 +29,7 @@ public class CourseController {
         return courseService.createCourse(course);
     }
 
-    @PutMapping("/{id}")
+    @PostMapping("/{id}")
     public Course updateCourse(@PathVariable Long id, @RequestBody Course updatedCourse) {
         return courseService.updateCourse(id, updatedCourse);
     }

@@ -21,6 +21,7 @@ import AddQuestions from './Components/AddQuestions';
 import Performance from './Components/DashBoard/Performance';
 import DTutors from './Components/DashBoard/DTutors';
 import certificate from './Components/certificate';
+import Forum from './Components/forum';
 
 
 
@@ -36,6 +37,7 @@ function App() {
           <Route path='/' Component={Home}></Route>
           <Route path='/courses' Component={Courses}></Route>
           <Route path='/course/:id' Component={Course}></Route>
+          <Route path='/discussion/:id' Component={Forum}></Route>
           <Route path='/certificate/:id' Component={certificate}></Route>
           <Route path='/assessment/:id' Component={Assessment}></Route>
           <Route path='/addcourse' Component={AddCourse}></Route>

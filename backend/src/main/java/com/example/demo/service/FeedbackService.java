@@ -1,14 +1,13 @@
 package com.example.demo.service;
 
-import com.example.demo.entity.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import com.example.demo.dto.FeedbackRequest;
 import com.example.demo.entity.Course;
 import com.example.demo.entity.Feedback;
 import com.example.demo.repository.CourseRepository;
 import com.example.demo.repository.FeedbackRepository;
-import com.example.demo.repository.UserRepository;
 
 import java.util.List;
 
@@ -18,8 +17,6 @@ public class FeedbackService {
     @Autowired
     private FeedbackRepository feedbackRepository;
 
-    @Autowired
-    private UserRepository userRepository;
 
     @Autowired
     private CourseRepository courseRepository;
@@ -32,16 +29,17 @@ public class FeedbackService {
         return null;
     }
 
-    public Feedback submitFeedback(Feedback feedback) {
-        User user = (User) userRepository.findById(feedback.getUser().getId()).orElse(null);
-        Course course = courseRepository.findById(feedback.getCourse().getId()).orElse(null);
+    public String submitFeedback(FeedbackRequest fr) {
+        Course course = courseRepository.findById(fr.getCourse_id()).orElse(null);
+        Feedback feedback = new Feedback();
 
-        if (user != null && course != null) {
-            feedback.setUser(user);
+        if (course != null) {
             feedback.setCourse(course);
-            return feedbackRepository.save(feedback);
+            feedback.setComment(fr.getComment());
+            feedbackRepository.save(feedback);
+            return "feedback submitted successfully";
         }
-        return null;
+        return "feedback submition failed";
     }
 }
 

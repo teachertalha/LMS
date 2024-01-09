@@ -5,6 +5,7 @@ import Forum from "./forum";
 import ReactPlayer from "react-player";
 import { Progress } from "antd";
 import { Button, Modal } from "antd";
+import Feedback from "./Feedback";
 
 const Course = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -313,7 +314,8 @@ const Course = () => {
           </div>
         </div>
       </div>
-      <Forum courseid={courseId} />
+      <button className="enroll-button" onClick={()=>navigate(`/discussion/${courseId}`)}>discussion</button>
+      <Feedback courseid={courseId} />
     </div>
   );
 };

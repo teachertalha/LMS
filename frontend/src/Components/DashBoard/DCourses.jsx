@@ -98,7 +98,7 @@ function Courses() {
                           <p >{course.course_name}</p>
                           <div style={{ width: "50px", display: "flex" }}>
                               <button
-                                onClick={() => {setOpenModal(true);setCid(course.course_id)}}
+                                // onClick={() => {setOpenModal(true);setCid(course.course_id)}}
 	
                                 style={{ marginLeft: "-100px",marginRight:'40px' ,backgroundColor:'white'}}
                                 className="delete-button"
@@ -111,7 +111,7 @@ function Courses() {
                               style={{ marginRight: "40px" ,backgroundColor:'white'}}
                               className="edit-button"
                             >
-                              <FontAwesomeIcon    icon={faEdit}></FontAwesomeIcon>
+                              <FontAwesomeIcon   icon={faEdit}></FontAwesomeIcon>
                             </button>
                               
                             <button onClick={() => addquestions(course.course_id)}

@@ -11,11 +11,6 @@ public class Feedback {
 
     @ManyToOne
     @JsonIgnore
-    @JoinColumn(name = "user_id")
-    private User user;
-
-    @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "course_id")
     private Course course;
 
@@ -27,14 +22,6 @@ public class Feedback {
 
 	public void setId(Long id) {
 		this.id = id;
-	}
-
-	public User getUser() {
-		return user;
-	}
-
-	public void setUser(User user) {
-		this.user = user;
 	}
 
 	public Course getCourse() {

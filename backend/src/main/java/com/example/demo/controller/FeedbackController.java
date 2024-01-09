@@ -2,6 +2,7 @@ package com.example.demo.controller;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import com.example.demo.dto.FeedbackRequest;
 import com.example.demo.entity.Feedback;
 import com.example.demo.service.FeedbackService;
 
@@ -20,7 +21,7 @@ public class FeedbackController {
     }
 
     @PostMapping
-    public Feedback submitFeedback(@RequestBody Feedback feedback) {
-        return feedbackService.submitFeedback(feedback);
+    public String submitFeedback(@RequestBody FeedbackRequest fr) {
+        return feedbackService.submitFeedback(fr);
     }
 }

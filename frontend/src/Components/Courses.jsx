@@ -12,58 +12,74 @@ function Courses() {
   const userId = localStorage.getItem("id");
    const navigate = useNavigate();
    const[enrolled , SetEnrolled] = useState([]);
+   const authToken = localStorage.getItem('token');
   
   useEffect(() => {
     fetch("http://localhost:8080/api/courses")
       .then((response) => response.json())
       .then((data) => {
         setCourses(data);
-        console.log(data);
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
       });
       const userId = localStorage.getItem("id");
-    fetch(`http://localhost:8080/api/learning/${userId}`)
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        let arr = [];
-        for (let i=0;i<data.length ;i++){
-          arr.push(data[i].course_id);
+      if(userId){
+        fetch(`http://localhost:8080/api/learning/${userId}`)
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data);
+            let arr = [];
+            for (let i=0;i<data.length ;i++){
+              arr.push(data[i].course_id);
+            }
+            SetEnrolled(arr);
+          })
+          .catch((error) => {
+            console.error("Error fetching data:", error);
+          });
         }
-        SetEnrolled(arr);
-      })
-      .catch((error) => {
-        console.error("Error fetching data:", error);
-      });
   }, []);
 
   function enrollCourse(courseId) {
-
-    const enrollRequest = {
-      userId: userId,
-      courseId: courseId
-  };
-    axios.post('http://localhost:8080/api/learning', enrollRequest)
-        .then((response) => {
-          if(response.data == "Enrolled successfully"){
-            toast.success('Course Enrolled successfully', {
-              position: 'top-right',
-              autoClose: 1000,
-              hideProgressBar: false,
-              closeOnClick: true,
-              pauseOnHover: false,
-              draggable: false,
-            });
-            setTimeout(()=>{
-              navigate(`/course/${courseId}`);
-            },2000);
-          }
-        })
-        .catch((error) => {
-            console.error('Enrollment error:', error);
-        });
+    if(authToken){
+      const enrollRequest = {
+        userId: userId,
+        courseId: courseId
+     };
+      axios.post('http://localhost:8080/api/learning', enrollRequest)
+          .then((response) => {
+            if(response.data == "Enrolled successfully"){
+              toast.success('Course Enrolled successfully', {
+                position: 'top-right',
+                autoClose: 1000,
+                hideProgressBar: false,
+                closeOnClick: true,
+                pauseOnHover: false,
+                draggable: false,
+              });
+              setTimeout(()=>{
+                navigate(`/course/${courseId}`);
+              },2000);
+            }
+          })
+          .catch((error) => {
+              console.error('Enrollment error:', error);
+          });
+    }else{
+      toast.error('You need to login to continue', {
+        position: 'top-right',
+        autoClose: 1000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: false,
+        draggable: false,
+      });
+      setTimeout(()=>{
+        navigate('/login');
+      },2000);
+    }
+    
  }
 
 

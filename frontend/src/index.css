@@ -1058,3 +1058,35 @@ input[type="radio"] {
   font-weight: bold;
   color: #27ae60;
 }
+
+.feedback-main{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 10px;
+  margin-top: 10px;
+  height: 30vh;
+  background-color: rgb(0, 0, 105);
+  color: white;
+}
+
+.get-input{
+  margin-left: 10%;
+  width: 40%;
+  background-color: #0056b3;
+  padding: 1px 20px 20px 20px;
+  border-radius: 10px;
+  box-shadow:0px 0px 1px 2px #ffffff86;
+}
+
+.feedback-list{
+  background-color: #0056b3;
+  padding: 1px 20px 20px 20px;
+  border-radius: 10px;
+  box-shadow:0px 0px 1px 2px #ffffff86;
+}
+
+.feedback-list li{
+  list-style: inside;
+  text-align: start;
+}
