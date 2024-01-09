@@ -69,7 +69,3 @@ This project is a Learning Management System (LMS) built with React.js for the f
 ## Contributing
 
 Feel free to contribute to the project by opening issues or submitting pull requests. Your feedback is highly appreciated!
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
