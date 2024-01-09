@@ -20,9 +20,6 @@ import ErrorPage from './Components/ErrorPage';
 import AddQuestions from './Components/AddQuestions';
 import Performance from './Components/DashBoard/Performance';
 import DTutors from './Components/DashBoard/DTutors';
-
-import TDashboard from './Components/tutuorDashboard/TDashboard';
-import TCourses from './Components/tutuorDashboard/TCourses';
 import certificate from './Components/certificate';
 
 
@@ -34,7 +31,6 @@ function App() {
         <Routes>
           <Route path="/addquestions/:id" element={<AddQuestions/>}/>
           <Route path='/dashboard' Component={Dashboard}></Route>
-          <Route path='/tdashboard' Component={TDashboard}></Route>
           <Route path='/login' Component={Login}></Route>
           <Route path='/register' Component={Register}></Route>
           <Route path='/' Component={Home}></Route>
@@ -47,7 +43,6 @@ function App() {
           <Route path='/profile' Component={Profile}></Route>
           <Route path='/Learnings' Component={Learnings}></Route>
           <Route path='/Dcourses' Component={DCourses}></Route>
-          <Route path='/tcourses' Component={TCourses}></Route>
           <Route path='/Dusers' Component={DUsers}></Route>
           <Route path='/Dtutors' Component={DTutors}></Route>
           <Route path='/Performance' Component={Performance} />

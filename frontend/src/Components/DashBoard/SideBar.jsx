@@ -4,7 +4,6 @@ import img1 from "../images/user.png"
 
 function SideBar(props){
     const { current } = props;
-    console.log(current);
     return(
         <div id="sidebar">
         

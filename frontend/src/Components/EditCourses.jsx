@@ -15,7 +15,7 @@ function EditCourse() {
     course_name: '',
     instructor: '',
     price: '',
-    discription: '',
+    description: '',
     y_link: '',
     p_link: '',
   });
@@ -24,7 +24,7 @@ function EditCourse() {
     course_name: '',
     instructor: '',
     price: '',
-    discription: '',
+    description: '',
     y_link: '',
     p_link: '',
   });
@@ -33,7 +33,6 @@ function EditCourse() {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
 
-    // Validate input and set error message
     let error = '';
     if (name === 'course_name' && value === '') {
       error = 'Course name is required';
@@ -41,7 +40,7 @@ function EditCourse() {
       error = 'Instructor is required';
     } else if (name === 'price' && value === '') {
       error = 'Price is required';
-    } else if (name === 'discription' && value === '') {
+    } else if (name === 'description' && value === '') {
       error = 'Description is required';
     } else if (name === 'y_link' && value === '') {
       error = 'Video Link is required';
@@ -54,8 +53,8 @@ function EditCourse() {
   useEffect(() => {
     async function fetchCourse() {
       try {
-        const response = await axios.get(`http://localhost:8800/course/${courseId}`);
-        const fetchedCourse = response.data[0];
+        const response = await axios.get(`http://localhost:8080/api/courses/${courseId}`);
+        const fetchedCourse = response.data;
         setFormData(fetchedCourse);
       } catch (err) {
         setError('Error fetching course');
@@ -67,22 +66,21 @@ function EditCourse() {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Check for errors in formErrors state
     for (const key in formErrors) {
       if (formErrors[key]) {
         setError('Please fill in all required fields.');
         return;
       }
     }
-
-    const response = await axios.put(
-      `http://localhost:8800/updateCourse/${courseId}`,
+    console.log(formData)
+    const response = await axios.post(
+      `http://localhost:8080/api/courses/${courseId}`,
       formData
     );
 
     if (response.status === 200) {
-      console.log('Course updated successfully');
-      navigate("/tCourses");
+      console.log(response);
+      navigate("/DCourses");
       toast.success('Updated successfully', {
         position: 'top-right',
         autoClose: 1000,
@@ -114,8 +112,8 @@ function EditCourse() {
           {formErrors.price && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'start'}}>{formErrors.price}</span>}
 
           <label>Description: </label>
-          <input type="text" name="discription" value={formData.discription} onChange={handleChange} required style={{ width: "100%" }} />
-          {formErrors.discription && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'start'}}>{formErrors.discription}</span>}
+          <input type="text" name="description" value={formData.description} onChange={handleChange} required style={{ width: "100%" }} />
+          {formErrors.description && <span className='error-msg' style={{color:'red',fontWeight:'bold',textAlign:'start'}}>{formErrors.description}</span>}
 
           <label>Video Link: </label>
           <input type="text" name="y_link" value={formData.y_link} onChange={handleChange} required style={{ width: "100%" }} />
