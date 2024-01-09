@@ -32,6 +32,7 @@ public Course updateCourse(Long id, Course updatedCourse) {
         existingCourse.setCourseName(updatedCourse.getCourseName());
         existingCourse.setDescription(updatedCourse.getDescription());
         existingCourse.setPhoto(updatedCourse.getPhoto());
+        existingCourse.setPrice(updatedCourse.getPrice());
         existingCourse.setTutor(updatedCourse.getTutor());
         existingCourse.setVideo(updatedCourse.getVideo());
         return courseRepository.save(existingCourse);
