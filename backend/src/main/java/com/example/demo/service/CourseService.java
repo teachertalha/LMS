@@ -30,6 +30,10 @@ public Course updateCourse(Long id, Course updatedCourse) {
     Course existingCourse = courseRepository.findById(id).orElse(null);
     if (existingCourse != null) {
         existingCourse.setCourseName(updatedCourse.getCourseName());
+        existingCourse.setDescription(updatedCourse.getDescription());
+        existingCourse.setPhoto(updatedCourse.getPhoto());
+        existingCourse.setTutor(updatedCourse.getTutor());
+        existingCourse.setVideo(updatedCourse.getVideo());
         return courseRepository.save(existingCourse);
     }
     return null;
