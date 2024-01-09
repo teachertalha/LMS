@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Confetti from "react-dom-confetti";
+import html2canvas from "html2canvas";
+import jsPDF from "jspdf";
+import img from './images/logo.jpg';
+import seal from './images/seal.png'
 
 const Certificate = () => {
   const [userDetails, setUserDetails] = useState(null);
@@ -64,6 +68,7 @@ const Certificate = () => {
   const generateCertificateNumber = () => {
     return Math.floor(Math.random() * 1000000);
   };
+
   const formatDate = (date) => {
     const options = { year: "numeric", month: "long", day: "numeric" };
     return new Date(date).toLocaleDateString(undefined, options);
@@ -87,7 +92,7 @@ const Certificate = () => {
 
   const rightConfig = {
     angle: 90,
-    spread: 180, 
+    spread: 180,
     startVelocity: 40,
     elementCount: 70,
     dragFriction: 0.1,
@@ -97,12 +102,37 @@ const Certificate = () => {
     height: "10px",
     colors: ["#3498db", "#e74c3c", "#27ae60"],
   };
-    
+
+  const [pdfDownloading, setPdfDownloading] = useState(false);
+
+  const handleDownloadPDF = () => {
+    setPdfDownloading(true);
+  
+    const certificateElement = document.getElementById("certificate");
+  
+    if (certificateElement) {
+      html2canvas(certificateElement).then((canvas) => {
+        const imgData = canvas.toDataURL("image/png");
+  
+        const pdf = new jsPDF("p", "mm", "a4");
+        const width = pdf.internal.pageSize.getWidth();
+        const height = (canvas.height * width) / canvas.width;
+  
+        pdf.addImage(imgData, "PNG", 0, 0, width, height);
+        pdf.save("certificate.pdf");
+  
+        setPdfDownloading(false);
+      });
+    } else {
+      console.error("Certificate element not found.");
+    }
+  };
+  
+
   return (
     <div
       style={{
         fontFamily: "Arial, sans-serif",
-        backgroundColor: "#f0f0f0",
         margin: 0,
         padding: "20px",
       }}
@@ -113,19 +143,18 @@ const Certificate = () => {
         <p>Loading...</p>
       ) : (
         <div
+        id="certificate"
           style={{
             maxWidth: "600px",
             margin: "50px auto",
             textAlign: "center",
-            backgroundColor: "#fff",
             border: "2px solid #3498db",
             padding: "30px",
-            boxShadow: "0 0 20px rgba(0, 0, 0, 0.2)",
             borderRadius: "15px",
           }}
         >
           <img
-            src="https://static.wixstatic.com/media/30fd6d_74b1751f1930415ea0e61002e1624f0f~mv2.png/v1/fill/w_203,h_54,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/logo_horizontal_5%20(1).png"
+            src={img}
             alt="Logo"
             style={{
               width: "100px",
@@ -168,7 +197,7 @@ const Certificate = () => {
             Certificate ID: {certificateNumber}
           </p>
           <img
-            src="https://www.pngkey.com/png/detail/99-993155_certified-png.png"
+            src={seal}
             alt="Signature"
             style={{
               width: "100px",
@@ -177,9 +206,24 @@ const Certificate = () => {
               borderTop: "2px solid #333",
             }}
           />
-           <Confetti active={!loading} config={rightConfig} />
+          <Confetti active={!loading} config={rightConfig} />
         </div>
       )}
+      <button
+        onClick={handleDownloadPDF}
+        style={{
+          marginTop: "20px",
+          padding: "10px 20px",
+          fontSize: "18px",
+          backgroundColor: "#3498db",
+          color: "#fff",
+          border: "none",
+          borderRadius: "5px",
+          cursor: "pointer",
+        }}
+      >
+        {pdfDownloading ? "Downloading..." : "Download Certificate as PDF"}
+      </button>
     </div>
   );
 };

@@ -2,7 +2,6 @@ package com.example.demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 import com.example.demo.dto.EnrollRequest;
 import com.example.demo.entity.Course;
 import com.example.demo.entity.Learning;
@@ -12,8 +11,7 @@ import com.example.demo.repository.CourseRepository;
 import com.example.demo.repository.LearningRepository;
 import com.example.demo.repository.ProgressRepository;
 import com.example.demo.repository.UserRepository;
-
-import java.util.List;
+import java.util.*;
 
 @Service
 public class LearningService {
@@ -47,7 +45,7 @@ public class LearningService {
 
         return null;
     }
-
+    
     public List<Learning> getEnrollments() {
     	return learningRepository.findAll();
     }

@@ -20,7 +20,7 @@ public class LearningController {
     public List<Course> getLearningCourses(@PathVariable Long userId) {
         return learningService.getLearningCourses(userId);
     }
-
+    
     @GetMapping
     public List<Learning> getEnrollments() {
         return learningService.getEnrollments();

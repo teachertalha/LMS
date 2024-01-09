@@ -19,7 +19,7 @@ function Learnings(){
           }
         }
         fetchCourse();
-      }, [courses]);
+      }, []);
 
       if (courses.length === 0) {
         return (
@@ -70,7 +70,6 @@ function Learnings(){
         </div>
         <Link to={`/course/${course.id}`} style={{textDecoration:"none"}}>
         <button className="learn-course-button">Start Learning</button>
-
         </Link>
         </div>
       ))}
