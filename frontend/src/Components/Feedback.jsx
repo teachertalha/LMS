@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 const Feedback = (props) => {
   const [feedback, setFeedback] = useState('');
 
-  const courseId = props.courseid;
+  const courseId = props.courseid;  
 
   const [feedbacks , setFeedbacks] =  useState([]);
 
