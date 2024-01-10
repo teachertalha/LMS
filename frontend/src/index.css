@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap");
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -12,11 +12,11 @@ html {
   scroll-behavior: smooth;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.auth{
+.auth {
   background-image: url("https://www.yudiz.com/codepen/animation-form/banner.jpg");
   background-size: cover;
   background-position: center;
@@ -26,7 +26,7 @@ code {
   padding-top: 3%;
 }
 
-.registration-auth{
+.registration-auth {
   background-image: url("https://www.yudiz.com/codepen/animation-form/banner.jpg");
   background-size: cover;
   background-position: center;
@@ -38,7 +38,9 @@ code {
 
 .container {
   font-family: "Montserrat", sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   max-width: 800px;
   height: 80%;
   margin: 0 auto;
@@ -47,10 +49,12 @@ code {
   border-radius: 5px;
   color: black;
   background-color: #ffffff00;
-  backdrop-filter: blur(5px)
+  backdrop-filter: blur(5px);
 }
-.container:hover{
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 54px 55px, rgba(0, 0, 0, 0.205) 0px -12px 30px, rgba(0, 0, 0, 0.253) 0px 4px 6px, rgba(0, 0, 0, 0.205) 0px 12px 13px, rgba(0, 0, 0, 0.185) 0px -3px 5px;
+.container:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 54px 55px,
+    rgba(0, 0, 0, 0.205) 0px -12px 30px, rgba(0, 0, 0, 0.253) 0px 4px 6px,
+    rgba(0, 0, 0, 0.205) 0px 12px 13px, rgba(0, 0, 0, 0.185) 0px -3px 5px;
 }
 
 h2 {
@@ -73,18 +77,19 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"],
-input[type="tel"] , select {
+input[type="tel"],
+select {
   width: 70%;
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 5px;
   font-size: 18px;
 }
-select{
+select {
   width: 70%;
 }
 
-.btn1{
+.btn1 {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -128,40 +133,37 @@ span a:hover {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
-  flex-wrap: wrap; 
+  flex-wrap: wrap;
 }
 
 .input-group div {
   display: flex;
   flex: 1;
-  margin-right: 10px; 
+  margin-right: 10px;
 }
 
 .text-area {
   padding: 10px;
   width: 200px;
-  justify-content: flex-end; 
+  justify-content: flex-end;
   height: 11px;
   display: flex;
 }
 
 .email,
 .password {
-  width: calc(50% - 10px); 
+  width: calc(50% - 10px);
 }
-
-
-
 
 /* .input-group {
   justify-content: space-between;
   margin-bottom: 16px;
 } */
 
-.email , .password{
+.email,
+.password {
   width: 100%;
 }
-
 
 .registration-container {
   height: 85vh;
@@ -174,7 +176,9 @@ span a:hover {
   background-color: #ffffff96;
   backdrop-filter: blur(5px);
   font-family: "Montserrat", sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
 }
 
 .registration-form {
@@ -218,14 +222,11 @@ span a:hover {
   margin-top: 8px;
 }
 
-
-
-@media(max-width: 768px) {
-  
-.container {
-  max-width: 400px;
-  padding: 20px;
-}
+@media (max-width: 768px) {
+  .container {
+    max-width: 400px;
+    padding: 20px;
+  }
   .input-group {
     flex-direction: column;
     margin-bottom: 5px;
@@ -235,68 +236,69 @@ span a:hover {
     flex: 1;
     margin-bottom: 8px;
   }
-  .text-area{
+  .text-area {
     width: 250px;
     padding: 20px;
     background-color: rgb(255, 255, 255);
     overflow: hidden;
   }
-    input[type="text"],
-    input[type="email"],
-    input[type="password"],
-    input[type="number"],
-    input[type="tel"] , select {
-      width: 60%;
-      padding: 10px;
-      border: 1px solid #ccc;
-      border-radius: 5px;
-      font-size: 18px;
-    }
-    select{
-      width: 67%;
-    }
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="number"],
+  input[type="tel"],
+  select {
+    width: 60%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 18px;
+  }
+  select {
+    width: 67%;
+  }
 
-    .registration-container {
-      height: auto;
-      width: 90%;
-    }
-    .registration-input-group{
-      display: block;
-      margin-bottom: 1px;
-    }
-  
-    .registration-input-group div {
-      flex-direction: column;
-      margin-bottom: -2px;
-    }
-  
-    .registration-text-area {
-      width: auto;
-      margin-right: 0;
-      text-align: left;
-      justify-content: flex-start;
-      align-items: flex-start;
-      margin-bottom: 1px;
-      padding: 0px;
-    }
-  
-    .registration-input-group input {
-      width: 100%;
-      margin-top: 0;
-    }
-    .registration-auth{
-      height: 120vh;
-    }
+  .registration-container {
+    height: auto;
+    width: 90%;
+  }
+  .registration-input-group {
+    display: block;
+    margin-bottom: 1px;
+  }
+
+  .registration-input-group div {
+    flex-direction: column;
+    margin-bottom: -2px;
+  }
+
+  .registration-text-area {
+    width: auto;
+    margin-right: 0;
+    text-align: left;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-bottom: 1px;
+    padding: 0px;
+  }
+
+  .registration-input-group input {
+    width: 100%;
+    margin-top: 0;
+  }
+  .registration-auth {
+    height: 120vh;
+  }
 }
 
-.nav{
+.nav {
   width: 100%;
   background-color: #cacaca;
 }
-.nav ul{
+.nav ul {
   display: flex;
 }
-.nav ul li{
+.nav ul li {
   font-size: 18px;
   font-weight: bold;
   list-style: none;
@@ -343,10 +345,10 @@ span a:hover {
   box-shadow: 0px 0px 10px 1px rgba(128, 128, 128, 0.74);
 }
 
-.course-card:hover{
+.course-card:hover {
   box-shadow: 0px 0px 10px 2px rgba(94, 94, 94, 0.74);
 }
-.learn-course-card:hover{
+.learn-course-card:hover {
   box-shadow: 0px 0px 10px 2px rgba(94, 94, 94, 0.74);
 }
 
@@ -368,7 +370,6 @@ span a:hover {
   font-size: 1.5rem;
   font-weight: bold;
   margin: 10px 0;
-  
 }
 
 .course-description {
@@ -410,31 +411,31 @@ span a:hover {
   transition: background-color 0.3s;
 }
 
-@media(max-width: 768px) {
-  .course-card{
+@media (max-width: 768px) {
+  .course-card {
     width: 90%;
   }
   .course-image {
     width: 95%;
     height: 160px;
   }
-  .learn-course-card{
+  .learn-course-card {
     width: 90%;
   }
-  .learn-course-image{
+  .learn-course-image {
     width: 130px;
     height: 90px;
   }
-  .learn-course-button{
-    padding:7px;
+  .learn-course-button {
+    padding: 7px;
     font-size: 9px;
   }
   .course-heading {
     font-size: 0.8rem;
     font-weight: bold;
-    margin: 10px 0;   
+    margin: 10px 0;
   }
-  .course-description{
+  .course-description {
     font-size: 14px;
   }
 }
@@ -443,7 +444,7 @@ span a:hover {
   background-color: #0056b3;
 }
 .enroll-button-deactive:hover {
-  background-color: #3b3c3c;;
+  background-color: #3b3c3c;
 }
 .learn-course-button:hover {
   background-color: #0056b3;
@@ -451,19 +452,19 @@ span a:hover {
 
 .navigation ul li .sign-out-button {
   background-color: red;
-  color: white; 
+  color: white;
   border: none;
   padding: -1px;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s; 
+  transition: background-color 0.3s;
 }
 
 .navigation ul li .sign-out-button:hover {
   background-color: darkred;
 }
 
-#footer{
+#footer {
   transition: height 0.3s ease-in-out;
 }
 
@@ -517,8 +518,7 @@ span a:hover {
 .profile-email,
 .profile-phno,
 .profile-dob,
-.profile-gender
- {
+.profile-gender {
   font-size: 16px;
   margin: 2px 0;
   color: #555;
@@ -533,7 +533,6 @@ span a:hover {
 .profile-card:hover .profile-domain {
   color: #63d3a6;
 }
-
 
 /* ImgUpload.css */
 
@@ -581,8 +580,6 @@ input[type="file"] {
   background-color: #fff;
 }
 
-
-
 .img-upload:hover:before {
   opacity: 1;
 }
@@ -592,16 +589,20 @@ img {
   height: 100%;
 }
 
-
-#contact{
+#contact {
   padding: 8vw;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-#contact-home{
-  background-image: linear-gradient(rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3),rgba(0, 0, 0, 0.3)),url("../src/Components/images/back2.jpg");
-  width:100%;
+#contact-home {
+  background-image: linear-gradient(
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3),
+      rgba(0, 0, 0, 0.3)
+    ),
+    url("../src/Components/images/back2.jpg");
+  width: 100%;
   height: 80vh;
   background-size: cover;
   background-position: center;
@@ -610,33 +611,33 @@ img {
   justify-content: center;
   align-items: center;
   text-align: center;
-  padding-top: 40px ;
+  padding-top: 40px;
 }
-#contact-home h2{
-  color:#ffffff;
+#contact-home h2 {
+  color: #ffffff;
   font-size: 2.2rem;
-  letter-spacing:1px ;
+  letter-spacing: 1px;
 }
 #contact .getin {
   width: 350px;
 }
-#contact .getin h2{
+#contact .getin h2 {
   color: #2c234d;
   font-size: 30px;
   font-weight: 800;
-  line-height: .8;
+  line-height: 0.8;
   margin-bottom: 16px;
 }
 
-#contact .getin p{
+#contact .getin p {
   color: #686875;
   line-height: 24px;
   margin-bottom: 33px;
   padding-bottom: 25px;
-  border-bottom: 1px solid #e5e4ed ;
+  border-bottom: 1px solid #e5e4ed;
 }
 
-#contact .getin h3{
+#contact .getin h3 {
   color: #2c234d;
   font-size: 16px;
   font-weight: 600;
@@ -644,22 +645,21 @@ img {
   margin-bottom: 15px;
 }
 
-#contact .getin .getin-details div{
+#contact .getin .getin-details div {
   display: flex;
 }
-#contact .getin .getin-details div h3{
+#contact .getin .getin-details div h3 {
   margin-top: -4px;
   font-size: 19px;
 }
-#contact .getin .getin-details div .i{
+#contact .getin .getin-details div .i {
   font-size: 16px;
   line-height: 22px;
   color: #ef25a8;
   margin-right: 8px;
   margin-top: 10x;
-  
 }
-#contact .getin .getin-details  p{
+#contact .getin .getin-details p {
   font-size: 14px;
   border-bottom: none;
   line-height: 22px;
@@ -667,14 +667,14 @@ img {
   margin-left: 20px;
   margin-top: -10px;
 }
-#contact .getin .getin-details .pro-links{
+#contact .getin .getin-details .pro-links {
   margin-top: 0px;
   border-radius: 12px;
 }
-#contact .getin .getin-details .pro-links .i{
+#contact .getin .getin-details .pro-links .i {
   background-color: #fffdfd;
   color: #00003e;
-  padding:10px ;
+  padding: 10px;
   border-style: solid;
   border-color: #040042dc;
   border-radius: 6px;
@@ -682,42 +682,39 @@ img {
   justify-content: center;
   border-width: 1px;
   margin-right: 8px;
-  
 }
-#contact .getin .getin-details .i:hover{
+#contact .getin .getin-details .i:hover {
   background-color: #4c00ffb0;
   color: #ffffff;
-  
 }
-#contact .form{
-  width:60%;
+#contact .form {
+  width: 60%;
   background: #ebe4ff;
   padding: 40px;
   border-radius: 10px;
 }
-#contact .form h4{
-  font-size:24px;
+#contact .form h4 {
+  font-size: 24px;
   color: #2c234d;
   line-height: 30px;
   margin-bottom: 8px;
 }
 
-#contact .form p{
+#contact .form p {
   color: #686875;
   font-size: 16px;
   line-height: 24px;
   padding-bottom: 25px;
-  
 }
 
-#contact .form .form-row{
+#contact .form .form-row {
   display: flex;
   justify-content: space-between;
-  width:100%;
+  width: 100%;
 }
 
-#contact .form .form-row input{
-  width:48%;
+#contact .form .form-row input {
+  width: 48%;
   font-size: 14px;
   font-weight: 400;
   border-radius: 3px;
@@ -730,8 +727,8 @@ img {
 }
 
 #contact .form .form-col input,
-#contact .form .form-col textarea{
-  width:100%;
+#contact .form .form-col textarea {
+  width: 100%;
   font-size: 14px;
   font-weight: 400;
   border-radius: 5px;
@@ -742,52 +739,47 @@ img {
   padding: 20px 30px;
   margin-bottom: 20px;
 }
-#contact .form button{
-  font-size: .9rem;
+#contact .form button {
+  font-size: 0.9rem;
   padding: 13px 25px;
   color: #fff;
-  background: rgb(21,21,100);
+  background: rgb(21, 21, 100);
   border-radius: 5px;
   outline: none;
   border: none;
   font-weight: 600;
   cursor: pointer;
 }
-#contact .form button:hover{
+#contact .form button:hover {
   color: rgb(255, 255, 255);
   background-color: #8f2bb6;
 }
 
-#map{
-  width:100%;
-  height:70vh;
+#map {
+  width: 100%;
+  height: 70vh;
   margin-bottom: 8vw;
 }
-#map iframe{
+#map iframe {
   width: 100%;
   height: 100%;
- }
+}
 
 .add {
   background-image: url("https://www.yudiz.com/codepen/animation-form/banner.jpg");
 
-  
   align-items: center;
-  
-  
+
   background-size: cover;
   background-position: center;
   height: 100%;
-  
+
   display: flex;
   justify-content: center;
   padding: 2%;
-  
 }
 
 .container1 {
- 
-   
   /* background-color: #aba1a1; 
   backdrop-filter: blur(4px);
   border-radius: 10px;
@@ -796,15 +788,17 @@ img {
   width: 700px; */
 
   font-family: "Montserrat", sans-serif;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   height: 80%;
-  width:40%;
+  width: 40%;
   margin: 0 auto;
   padding: 30px 40px;
   border: 1px solid #ccc;
   border-radius: 5px;
   background-color: #eee8e800;
-  backdrop-filter: blur(3px)
+  backdrop-filter: blur(3px);
 }
 
 h2 {
@@ -815,16 +809,12 @@ h2 {
 label {
   display: block;
   margin-top: 12px;
-  
- 
 }
 
-.add .container1 input{
+.add .container1 input {
   margin-top: 5px;
   border-radius: 15px;
 }
- 
-
 
 .btn1 {
   text-align: center;
@@ -845,38 +835,37 @@ button[type="submit"]:hover {
   background-color: #2980b9;
 }
 
-.delete-button{
+.delete-button {
   color: red;
   border: none;
 }
-.delete-button:hover{
+.delete-button:hover {
   background-color: white;
 }
 
-.edit-button{
+.edit-button {
   color: rgb(107, 23, 0);
   border: none;
 }
-.edit-button:hover{
+.edit-button:hover {
   background-color: white;
 }
 
-.course-details h2{
+.course-details h2 {
   color: rgb(0, 0, 0);
 }
 
-
-/* Style for the container */  
+/* Style for the container */
 .assessment-container {
   background-color: #ffffff;
   padding: 20px;
   font-family: Arial, sans-serif;
 }
-.assessment-container #backbtn{
+.assessment-container #backbtn {
   background-color: #135ba9;
   color: #fff;
   border: none;
-  
+
   font-size: 14px;
   padding: -30px -20px;
   cursor: pointer;
@@ -926,7 +915,6 @@ input[type="radio"] {
   background-color: #0b4685;
 }
 
-
 /* CSS to center-align the buttons horizontally */
 .ant-modal-footer {
   display: flex;
@@ -969,87 +957,77 @@ input[type="radio"] {
   align-items: center;
   justify-content: center;
   background-color: #ff08008a; /* Example: Change cancel button background color */
-  border-color: #dc3545; 
+  border-color: #dc3545;
   /* Example: Change cancel button text color */
 }
 
-@media(max-width: 768px) {
-  .submit-button11{
-    margin-left:130px;
-    padding:5px 15px;
+@media (max-width: 768px) {
+  .submit-button11 {
+    margin-left: 130px;
+    padding: 5px 15px;
   }
 }
 
-
-
-
 /* payment */
 
-
-
 .book_container {
-	width: 400px;
-	border-radius: 10px;
-	background-color: white;
-	box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
-  
+  width: 400px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgb(0 0 0 / 25%);
 }
 
 .book_img {
   width: 100%;
-	object-fit: cover;
-	border-radius: 10px;
-	border-bottom-right-radius: 0;
-	border-bottom-left-radius: 0;
+  object-fit: cover;
+  border-radius: 10px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
 }
 
 .book_name {
-	font-size: 20px;
-	font-weight: bold;
-	margin: 5px 0;
-	text-align: center;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 5px 0;
+  text-align: center;
 }
 
 .book_author {
-	font-size: 16px;
-	font-weight: 500;
-	margin: 5px 0;
-	text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0;
+  text-align: center;
 }
 
 .book_price {
-	font-size: 16px;
-	font-weight: 500;
-	margin: 5px 0;
-	text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  margin: 5px 0;
+  text-align: center;
 }
 
 .book_price > span {
-	color: #21a700;
+  color: #21a700;
 }
 
 .buy_btn {
-	width: 100%;
-	height: 50px;
-	outline: none;
-	border: none;
-	font-size: 12px;
-	text-transform: uppercase;
-	font-weight: bold;
-	cursor: pointer;
-	border-bottom-right-radius: 10px;
-	border-bottom-left-radius: 10px;
-	background-color: #ffce52;
-	margin-top: 10px;
+  width: 100%;
+  height: 50px;
+  outline: none;
+  border: none;
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  background-color: #ffce52;
+  margin-top: 10px;
 }
 
-.buy_btn:hover{
+.buy_btn:hover {
   background-color: #d6af4c;
 }
-
-
-
-
 
 .performance-container {
   text-align: center;
@@ -1066,7 +1044,8 @@ input[type="radio"] {
   overflow: hidden;
 }
 
-.performance-table th, .performance-table td {
+.performance-table th,
+.performance-table td {
   border: 1px solid #58535385;
   padding: 10px;
   text-align: center;
@@ -1097,15 +1076,14 @@ input[type="radio"] {
   padding: 8px 12px;
   font-weight: bold;
 }
-.completed-status{
-  color:#21a700;
+.completed-status {
+  color: #21a700;
 }
-.completed-certificate{
-  color:#0073ee;
+.completed-certificate {
+  color: #0073ee;
   font-weight: bold;
   cursor: pointer;
 }
-
 
 .pending-status {
   background-color: #f44336;
@@ -1119,7 +1097,6 @@ input[type="radio"] {
   }
 }
 
-
 .progress-report-section {
   display: flex;
   justify-content: space-between;
@@ -1131,7 +1108,7 @@ input[type="radio"] {
   padding: 10px;
   box-shadow: 0 0 25px rgba(0, 0, 0, 0.452);
 }
-.pro-report{
+.pro-report {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1158,7 +1135,7 @@ input[type="radio"] {
   color: #27ae60;
 }
 
-.feedback-main{
+.feedback-main {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1169,23 +1146,23 @@ input[type="radio"] {
   color: white;
 }
 
-.get-input{
+.get-input {
   margin-left: 10%;
   width: 40%;
   background-color: #0056b3;
   padding: 1px 20px 20px 20px;
   border-radius: 10px;
-  box-shadow:0px 0px 1px 2px #ffffff86;
+  box-shadow: 0px 0px 1px 2px #ffffff86;
 }
 
-.feedback-list{
+.feedback-list {
   background-color: #0056b3;
   padding: 1px 20px 20px 20px;
   border-radius: 10px;
-  box-shadow:0px 0px 1px 2px #ffffff86;
+  box-shadow: 0px 0px 1px 2px #ffffff86;
 }
 
-.feedback-list li{
+.feedback-list li {
   list-style: inside;
   text-align: start;
 }
