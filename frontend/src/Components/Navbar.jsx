@@ -33,7 +33,6 @@ function Navbar(props) {
       <nav>
         <div className="logo1">
           <img src={logo} alt="" />
-          <h2 id="academ">Academy</h2>
         </div>
         <div className="navigation">
           <div id="menu-btn" >

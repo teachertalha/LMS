@@ -26,7 +26,7 @@ function Home(){
      <Navbar page={"home"}/>
       <div>
       <section id="home">
-        <h2>Enhance your future with tefoLOGIC Academy</h2>
+        <h2>Enhance your future with EduVerse Academy</h2>
         <p> OneYes Academy is a massive open online course provider, and its learning experience arranges coursework into a series of modules and lessons that can include videos, text notes, and assessment tests.</p>
         <div className="btn">
           <a className="blue" href="#">Learn More</a>
