@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from "react";
 
 const Feedback = (props) => {
-  const [feedback, setFeedback] = useState('');
+  const [feedback, setFeedback] = useState("");
 
-  const courseId = props.courseid;  
+  const courseId = props.courseid;
 
-  const [feedbacks , setFeedbacks] =  useState([]);
+  const [feedbacks, setFeedbacks] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:8080/api/feedbacks/${courseId}`)
@@ -14,32 +14,31 @@ const Feedback = (props) => {
         const firstThreeFeedbacks = data.slice(0, 3);
         setFeedbacks(firstThreeFeedbacks);
       })
-      .catch((error) => console.error('Error:', error));
+      .catch((error) => console.error("Error:", error));
   }, [courseId]);
 
   const sendFeedback = () => {
-    if (feedback === '' && !courseId) {
+    if (feedback === "" && !courseId) {
       alert("Please enter feedback to submit");
     } else {
-      fetch('http://localhost:8080/api/feedbacks', {
-        method: 'POST',
+      fetch("http://localhost:8080/api/feedbacks", {
+        method: "POST",
         headers: {
-          'Content-Type': 'application/json',
+          "Content-Type": "application/json",
         },
-        body: JSON.stringify({comment:feedback , course_id:courseId}),
+        body: JSON.stringify({ comment: feedback, course_id: courseId }),
       })
-      .then(response => {
-        console.log(response);  
-        setFeedback("");  
-      })
-      .catch(error => {
-        console.error('Error:', error);
-      });
+        .then((response) => {
+          console.log(response);
+          setFeedback("");
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+        });
     }
-  }
+  };
 
-  useEffect(() => {
-  }, [feedback]); 
+  useEffect(() => {}, [feedback]);
 
   return (
     <div className="feedback-main">
@@ -52,7 +51,18 @@ const Feedback = (props) => {
           onChange={(e) => setFeedback(e.target.value)}
           value={feedback}
         />
-        <button onClick={sendFeedback} style={{ marginTop: '5px', padding: '5px', backgroundColor: 'darkviolet', borderRadius: '5px', color: 'white' }}>Submit</button>
+        <button
+          onClick={sendFeedback}
+          style={{
+            marginTop: "5px",
+            padding: "5px",
+            backgroundColor: "darkviolet",
+            borderRadius: "5px",
+            color: "white",
+          }}
+        >
+          Submit
+        </button>
       </div>
       <div className="feedback-list">
         <h3>Recent Feedbacks:</h3>
