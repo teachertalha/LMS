@@ -31,8 +31,8 @@ This project is a Learning Management System (LMS) built with React.js for the f
   - Interaction between users and instructors.
 
 - **Admin DashBoard:**
-  -For course addition and assessment question addition.
-  -tracking of students, coursees, and enrollments. 
+  - For course addition and assessment question addition.
+  - tracking of students, coursees, and enrollments. 
 
 ## Technologies Used
 
