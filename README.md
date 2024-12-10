@@ -30,6 +30,10 @@ This project is a Learning Management System (LMS) built with React.js for the f
   - Course-specific discussion forums for users.
   - Interaction between users and instructors.
 
+- **Admin DashBoard:**
+  -For course addition and assessment question addition.
+  -tracking of students, coursees, and enrollments. 
+
 ## Technologies Used
 
 - **Frontend:**
@@ -62,7 +66,7 @@ This project is a Learning Management System (LMS) built with React.js for the f
 
 - Visit the application on http://localhost:3000.
 
-- As an admin, you can manage courses, create assessments, and monitor user progress.
+- As an admin, you can manage courses, create assessments, and monitor user progress. To access the admin dashboard, if your application is running locally, you can navigate to http://localhost:3000/dashboard.
 
 - Users can register, log in, view courses, take assessments, and receive certificates.
 
