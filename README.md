@@ -53,7 +53,7 @@ This project is a Learning Management System (LMS) built with React.js for the f
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/PATMESH/Learning-Management-System.git
+    git clone https://github.com/teachertalha/LMS.git
     ```
 
 2. Navigate to the frontend and backend folders and follow their respective setup instructions.
