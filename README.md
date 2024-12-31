@@ -8,7 +8,7 @@ This projecst is a Learning Management System (LMS) built with React.js for the 
 
 - **User Management:**
   - User registration and login functionality.
-  - User profiles with the ability to update information.
+  - User profiles with the ability to update information.s
 
 - **Course Management:**
   - Admin can add, edit, and manage courses.
