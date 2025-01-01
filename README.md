@@ -12,7 +12,7 @@ This projecst is a Learning Management System (LMS) built with React.js for the 
 
 - **Course Management:**
   - Admin can add, edit, and manage courses.
-  - Course details include name, instructor, description, etcs.
+  - Course details include name, instructor, description, etc.
   
 - **Assessment:**
   - Users can take assessments related to courses.
